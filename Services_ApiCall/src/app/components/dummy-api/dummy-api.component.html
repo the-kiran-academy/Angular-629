@@ -1,0 +1,27 @@
+<button (click)="getQuote()">Get Quote</button>
+
+<button (click)="getAllPosts()">Get All Posts</button>
+
+<h4>ID</h4>
+{{ id }}
+
+<h4>Quote</h4>
+{{ quote }}
+
+<h4>Author</h4>
+{{ author }}
+
+<h2>List of Post</h2>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+  </tr>
+  <tbody *ngFor="let p of allPost">
+    <tr>
+      <td>{{p.id}}</td>
+      <td>{{p.title}}</td>
+    </tr>
+  </tbody>
+</table>
