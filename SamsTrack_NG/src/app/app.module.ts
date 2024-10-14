@@ -20,6 +20,7 @@ import { AllAttendanceComponent } from './components/all-attendance/all-attendan
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
+import { PasswordMaskPipe } from './pipes/password-mask.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { HomeComponent } from './components/home/home.component';
     ViewSubjectComponent,
     TakeAttendanceComponent,
     AllAttendanceComponent,
-    HomeComponent
+    HomeComponent,
+    PasswordMaskPipe
   ],
   imports: [
     BrowserModule,

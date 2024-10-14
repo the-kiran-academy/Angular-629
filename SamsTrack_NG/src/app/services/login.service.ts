@@ -9,7 +9,7 @@ export class LoginService {
   constructor(private http: HttpClient) {}
 
   login(loginRequest: any): Observable<any> {
-    const url = 'http://localhost:8091/user/login-users';
+    const url = 'http://localhost:8091/user/login-user';
     return this.http.post(url, loginRequest).pipe(catchError(this.handleError));
   }
 
