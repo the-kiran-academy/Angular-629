@@ -1,102 +1,179 @@
 <app-menu></app-menu>
 
-
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="container register">
-                <div class="row">
-                    <div class="col-md-3 register-left">
-                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-                        <h3>Welcome</h3>
-                        <p>You are 30 seconds away from earning your own money!</p>
-
-                    </div>
-                    <div class="col-md-9 register-right">
-
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <h3 class="register-heading">Add User</h3>
-                                <div class="row register-form">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control mb-6" placeholder="First Name *" name="firstName" [(ngModel)]="firstName" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Last Name *" name="lastName" [(ngModel)]="lastName" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Password *" name="password" [(ngModel)]="password" />
-                                        </div>
-
-
-                                    </div>
-                                    <div class="col-md-6">
-
-                                      <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Username *" name="username" [(ngModel)]="username" />
-                                    </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Your Email *" name="email" [(ngModel)]="email" />
-                                        </div>
-
-                                        <div class="form-group">
-                                            <select class="form-control" name="role" [(ngModel)]="role">
-                                                <option class="hidden"  selected disabled>Please select user role</option>
-                                                <option value="user">User</option>
-                                                <option>Faculty</option>
-                                                <option>Admin</option>
-                                            </select>
-                                        </div>
-
-                                        <input type="submit" (click)="addUser()" class="btnRegister"  value="Register"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                <h3  class="register-heading">Apply as a Hirer</h3>
-                                <div class="row register-form">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="First Name *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Last Name *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Email *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone *" value="" />
-                                        </div>
-
-
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Password *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <select class="form-control">
-                                                <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
-                                                <option>What is your Birthdate?</option>
-                                                <option>What is Your old Phone Number</option>
-                                                <option>What is your Pet Name?</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="`Answer *" value="" />
-                                        </div>
-                                        <input type="submit" class="btnRegister"  value="Register"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+  <div class="row">
+    <div class="col-md-3 register-left">
+      <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+      <h3>Welcome</h3>
+      <p>You are 30 seconds away from earning your own money!</p>
+    </div>
+    <div class="col-md-9 register-right">
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="home"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+        >
+          <h3 class="register-heading">Add User</h3>
+          <div class="row register-form">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control mb-6"
+                  placeholder="First Name *"
+                  name="firstName"
+                  [(ngModel)]="firstName"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Last Name *"
+                  name="lastName"
+                  [(ngModel)]="lastName"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Password *"
+                  name="password"
+                  [(ngModel)]="password"
+                />
+              </div>
             </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Username *"
+                  name="username"
+                  [(ngModel)]="username"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Your Email *"
+                  name="email"
+                  [(ngModel)]="email"
+                />
+              </div>
 
-            <app-footer></app-footer>
+              <div class="form-group">
+                <select class="form-control" name="role" [(ngModel)]="role">
+                  <option class="hidden" selected disabled>
+                    Please select user role
+                  </option>
+                  <option value="user">User</option>
+                  <option>Faculty</option>
+                  <option>Admin</option>
+                </select>
+              </div>
+
+              <input
+                type="submit"
+                (click)="addUser()"
+                class="btnRegister"
+                value="Register"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show"
+          id="profile"
+          role="tabpanel"
+          aria-labelledby="profile-tab"
+        >
+          <h3 class="register-heading">Apply as a Hirer</h3>
+          <div class="row register-form">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="First Name *"
+                  value=""
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Last Name *"
+                  value=""
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email *"
+                  value=""
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  maxlength="10"
+                  minlength="10"
+                  class="form-control"
+                  placeholder="Phone *"
+                  value=""
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Password *"
+                  value=""
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Confirm Password *"
+                  value=""
+                />
+              </div>
+              <div class="form-group">
+                <select class="form-control">
+                  <option class="hidden" selected disabled>
+                    Please select your Sequrity Question
+                  </option>
+                  <option>What is your Birthdate?</option>
+                  <option>What is Your old Phone Number</option>
+                  <option>What is your Pet Name?</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="`Answer *"
+                  value=""
+                />
+              </div>
+              <input type="submit" class="btnRegister" value="Register" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,1 +1,40 @@
-<p>view-subject works!</p>
+<app-menu></app-menu>
+
+<div class="container py-5">
+  <h2 class="text-center mb-4">Update Subject</h2>
+  <form class="row g-3 needs-validation" novalidate>
+    <!-- ID Input (Read-only) -->
+    <div class="col-md-6">
+      <label for="subjectId" class="form-label">Subject ID</label>
+      <input
+        type="text"
+        class="form-control"
+        id="subjectId"
+        [(ngModel)]="subject.id"
+        name="id"
+        readonly
+      />
+    </div>
+
+    <!-- Name Input -->
+    <div class="col-md-6">
+      <label for="subjectName" class="form-label">Subject Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="subjectName"
+        [(ngModel)]="subject.name"
+        name="name"
+        required
+      />
+      <div class="invalid-feedback">Please provide a valid subject name.</div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="col-12">
+      <button type="submit" (click)="updateSubject()" class="btn btn-primary">Update Subject</button>
+    </div>
+  </form>
+</div>
+
+<app-footer></app-footer>

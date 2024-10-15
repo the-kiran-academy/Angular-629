@@ -1,1 +1,56 @@
-<p>all-subject works!</p>
+<app-menu></app-menu>
+<button class="btn btn-info mb-4 float-end" (click)="toggleForm()">
+  {{ showForm ? 'Hide Form' : 'Show Form' }}
+</button>
+<div *ngIf="showForm" class="container py-2 d-flex justify-content-center align-items-center">
+  <div class="card p-4 shadow-lg" style="width: 50%;">
+    <h2 class="text-center mb-4">Add New Subject</h2>
+  <!-- Add Subject Form -->
+  <form  class="row g-3 needs-validation" novalidate>
+    <!-- Name Input -->
+    <div class="col-md-6">
+      <label for="subjectName" class="form-label">Subject Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="subjectName"
+        [(ngModel)]="name"
+        name="name"
+        required
+      />
+
+    </div>
+    <!-- Submit Button -->
+    <div class="col-md-12">
+      <button type="submit" (click)="addSubject()" class="btn btn-success">Add Subject</button>
+    </div>
+
+  </form>
+  </div>
+  </div>
+
+  <!-- Subject List Table -->
+  <div class="container table-responsive py-1 d-flex justify-content-center">
+    <table class="table table-bordered table-hover text-center">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let s of subjects">
+        <tr>
+          <td>{{ s.id }}</td>
+          <td>{{ s.name }}</td>
+          <td>
+            <a class="btn btn-primary" [routerLink]="['/view-subject', s.id]">View</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+<app-footer></app-footer>
