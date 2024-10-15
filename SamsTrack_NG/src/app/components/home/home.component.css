@@ -1,0 +1,7 @@
+.image-section {
+  flex-grow: 1; /* Take up remaining space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide overflow for large images */
+}

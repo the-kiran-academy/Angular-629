@@ -1,0 +1,37 @@
+/* Footer Styling */
+.footer {
+  flex-shrink: 0; /* Prevent shrinking */
+  background-color: #343a40; /* Dark background for footer */
+  color: white; /* Text color */
+  text-align: center; /* Center the text */
+  padding: 10px 20px; /* Padding for the footer */
+  height: 40px; /* Fixed height */
+  display: flex;
+  justify-content: space-between; /* Align items to the left and right */
+  align-items: center; /* Center vertically */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Footer links */
+.footer-links {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Display links horizontally */
+  gap: 10px; /* Space between links */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.footer-links li a {
+  color: white; /* Make links white */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer-links li a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}

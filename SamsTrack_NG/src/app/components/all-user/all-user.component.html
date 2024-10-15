@@ -9,6 +9,7 @@
       <th scope="col">Last Name</th>
       <th scope="col">Email</th>
       <th scope="col">Role</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody *ngFor="let u of userList; let i = index">
@@ -20,6 +21,19 @@
       <td>{{u.lastName}}</td>
       <td>{{u.email}}</td>
       <td>{{u.role}}</td>
+      <td>
+        <button (click)="deleteUser(u.username)" class="btn btn-danger">Delete</button>&nbsp;
+        <a class="btn btn-info" [routerLink]="['/view-user', u.username]">View</a>
+      </td>
+
+
+
+
+
+
+
     </tr>
   </tbody>
 </table>
+
+<app-footer></app-footer>
